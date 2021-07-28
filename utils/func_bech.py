@@ -1,4 +1,4 @@
-import db
+from db import client
 import time
 import inspect
 
@@ -12,7 +12,7 @@ def func_decorator(func):
         start_time = time.time()
         func(*args, **kwargs)
         end_time = time.time()
-        benchmarks = db.client.benchmarks
+        benchmarks = client.benchmarks
         func_benchmark = benchmarks.funcions_benchmark
         func_benchmark_data = {"module": get_module_name(func).__name__,
                                "function": func.__name__,
