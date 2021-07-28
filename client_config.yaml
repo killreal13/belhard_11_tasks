@@ -1,0 +1,3 @@
+#example data
+host: "localhost"
+port: 27017
